@@ -4,7 +4,8 @@ A simple K/V store server that records number values for different string keys. 
 The entire project is deployed on a docker container for portability, consistency, and various other benefits.
 
 ## Requirements
-pip3 install grpcio grpcio-tools
+pip3 install grpcio grpcio-tools    
+install docker on your machine
 
 ## Usage
 python3 -m grpc_tools.protoc -I=. --python_out=. --grpc_python_out=. numstore.proto   
