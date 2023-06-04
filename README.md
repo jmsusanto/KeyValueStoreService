@@ -8,3 +8,5 @@ pip3 install grpcio grpcio-tools
 
 ## Usage
 python3 -m grpc_tools.protoc -I=. --python_out=. --grpc_python_out=. numstore.proto
+python3 server.py &
+python3 client.py 5440
