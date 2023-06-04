@@ -1,5 +1,5 @@
 # KeyValueStoreService
-A simple K/V store server that records number values for different string keys. Similar to a Python dictionary, but via a service that could be shared by code running on different computers.
+A simple K/V store server that records number values for different string keys. Similar to a Python dictionary, but via a service that could be shared by code running on different computers. The server is also able to compute the factorials
 
 The method described in the 'Description' section below deploys the server on a docker container for portability, consistency, and various other benefits.
 
