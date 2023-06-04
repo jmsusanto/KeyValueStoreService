@@ -1,0 +1,3 @@
+hit rate at: 73.9%
+p50 response time of: 4.626 ms
+p99 response time of: 10.61 ms
