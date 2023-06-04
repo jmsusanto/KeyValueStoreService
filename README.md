@@ -7,9 +7,11 @@ The entire project is deployed on a docker container for portability, consistenc
 pip3 install grpcio grpcio-tools
 
 ## Usage
-python3 -m grpc_tools.protoc -I=. --python_out=. --grpc_python_out=. numstore.proto   
-python3 server.py &   
-python3 client.py 5440    
+python3 -m grpc_tools.protoc -I=. --python_out=. --grpc_python_out=. numstore.proto
+docker build -t keyvalue .
+docker run -d -p 54321:5440 keyvalue
+python3 client.py 54321 > out.txt
+cat out.txt
 
 ## Description
 ### server.py   
