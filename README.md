@@ -7,6 +7,20 @@ The entire project is deployed on a docker container for portability, consistenc
 pip3 install grpcio grpcio-tools
 
 ## Usage
-python3 -m grpc_tools.protoc -I=. --python_out=. --grpc_python_out=. numstore.proto
-python3 server.py &
-python3 client.py 5440
+python3 -m grpc_tools.protoc -I=. --python_out=. --grpc_python_out=. numstore.proto   
+python3 server.py &   
+python3 client.py 5440    
+
+## Description
+### server.py   
+The server has 2 key functions. SetNum takes a key (string) and value (int) as parameters and returns a total (int). Fact takes a key (string) as a parameter and does a lookup of the value from the global dictionary corresponding to that key, then return the factorial of that value.
+
+### client.py
+The client is a demonstration on how to use server.py. This particular script starts some threads or processes that send random requests to the server, with the following features:    
+- 8 threads/processes
+- each thread/process sends 100 random requests to the server
+- for each request, randomly decide between SetNum and Fact (50/50 mix)
+- for each request, randomly choose a key (from a list of 100 possible keys)
+- for SetNum requests, randomly select a number between 1 and 15
+
+
